@@ -1,0 +1,38 @@
+.navbar{
+    background-color:#3c8dbc;
+}
+
+.notif-bell { 
+    position: relative; 
+    top: 2px; 
+    left: -31px; 
+    height: 14px;
+    font-size: 9px;
+    padding: 2px 3px 2px 2px;
+    color: white;
+    background-color: orange;
+   } 
+
+.notif-flag { 
+    position: relative; 
+    top: 2px; 
+    left: -31px; 
+    height: 14px;
+    font-size: 9px;
+    padding: 2px 4px 2px 3px;
+    color: white;
+   } 
+
+@media(min-width: 759px){
+    .sidebarToggled {
+        padding-left: 266px;
+        transition: linear 300ms ;
+    }
+
+    .sidebar-closed{
+        padding-left: 50px;
+    }
+
+}
+
+ 

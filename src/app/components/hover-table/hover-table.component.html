@@ -1,0 +1,89 @@
+<table class="table table-hover">
+    <div class="table-spacing">
+      <h6 style="font-weight: bold;">Worker 1, Host {{specList.Info.Hostname}}</h6>
+
+      <table class="table table-hover m-view">
+        <tbody>
+          <tr>
+            <th class="m-spec-list">
+              <span>
+                <i class="fas fa-square-full bullet m-bullet"></i>
+                  <span class="spec-list-item">CPU:</span>
+                </span>
+            </th>
+            <td class="progressBar progressBar-m">
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(specList.CpuUse)/(specList.Info.Resources.CPUs)" style="border-radius: 10px;" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="spec-list-item">
+                {{specList.CpuUse}} core(s) in use
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="m-spec-list">
+              <span>
+              <i class="fas fa-square-full bullet m-bullet"></i>
+                <span class="spec-list-item">RAM:</span>
+              </span>
+            </th>
+            <td class="progressBar progressBar-m">
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(specList.Info.Resources.MemSwap)/(specList.Info.Resources.MemPhysical)" style="border-radius: 10px;" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="spec-list-item">
+                {{(specList.Info.Resources.MemSwap)/(specList.Info.Resources.MemPhysical) | number:'1.2-2'}}%, 
+                {{specList.Info.Resources.MemSwap}}GiB/{{specList.Info.Resources.MemPhysical}}GiB
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="m-spec-list">
+              <span>
+                <i class="fas fa-square-full bullet m-bullet"></i>
+                  <span class="spec-list-item">VMEM:</span>
+                </span>
+            </th>
+            <td class="progressBar progressBar-m">
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(specList.Info.Resources.MemReserved)/(specList.Info.Resources.MemPhysical)" style="border-radius: 10px;" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </td>
+            <td>
+              <span class="spec-list-item">
+                {{(specList.Info.Resources.MemReserved)/(specList.Info.Resources.MemPhysical) | number:'1.2-2'}}%, 
+                {{specList.Info.Resources.MemReserved}}GiB/{{specList.Info.Resources.MemPhysical}}GiB
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="m-spec-list">
+                <span>
+                  <i class="fas fa-square-full bullet m-bullet"></i>
+                    <span class="spec-list-item">GPU:</span>
+                  </span>
+            </th>
+            <td colspan="5">
+              <span *ngIf="specList.GpuUsed; else elseBlock" class="spec-list-item">
+                {{specList.Info.Resources.GPUs[0]}}, in use 
+              </span>
+              <span #elseBlock class="spec-list-item">{{specList.Info.Resources.GPUs[0]}}, not used</span>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+    </div>
+  </table>

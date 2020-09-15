@@ -1,0 +1,120 @@
+<!-- <div class="sidebar-header d-header">
+    <h4 class="sidebar-title">Nebula AI</h4>
+  </div>
+
+  <ul class="sidebar-nav">
+    <li>
+      <a href="#dasboardSubmenu" data-toggle="collapse" class="dropdown-toggle">
+        <i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;Dashboard
+      </a>
+      
+      <ul class="collapse sidebar-nav submenu" id="dasboardSubmenu">
+        <li>
+          <a ><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Option 1</a>
+        </li>
+        <li>
+          <a><i class="fas fa-chart-bar"></i>&nbsp;&nbsp;Option 2</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="#tableSubmenu" data-toggle="collapse" class="dropdown-toggle">
+        <i class="fas fa-table"></i>&nbsp;&nbsp;Table
+      </a>
+      <ul class="collapse sidebar-nav submenu" id="tableSubmenu">
+        <li>
+          <a href="#"><i class="far fa-circle"></i>&nbsp;&nbsp;Simple Tables</a>
+        </li>
+        <li>
+          <a href="#"><i class="far fa-circle"></i>&nbsp;&nbsp;Data Tables</a>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+
+  <div *ngIf="isMobileDevice == false; then thenBlock else elseBlock"></div>
+
+  <ng-template #thenBlock >
+    <div id="sidebar-short-title" class="sidebar-header d-header">
+      <h4 class="sidebar-title" style="font-weight:300">NBAI</h4>
+    </div>
+
+    <div id="sidebar-long-title" class="sidebar-header d-header sidebar-title-swap">
+      <h4 class="sidebar-title">Nebula AI</h4>
+    </div>
+
+    <ul class="closed-siderbar" (click)="toggleSidebar()">
+      <li>
+        <a data-toggle="collapse" class="dropdown-toggle">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="menu-spacing">
+              &nbsp;&nbsp;Dashboard
+          </span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="#tableSubmenu" data-toggle="collapse" class="dropdown-toggle">
+            <i class="fas fa-table"></i>
+            <span class="menu-spacing">
+              &nbsp;&nbsp;Table
+          </span>
+        </a>
+
+        <ul class="collapse sidebar-nav submenu"  id="tableSubmenu">
+          <li id="submenu-spacing">
+            <a href="#"><i class="far fa-circle"></i>
+              <span class="menu-spacing">
+              &nbsp;&nbsp;Simple Tables
+            </span>
+            </a>
+          </li>
+          <li id="submenu-spacing2">
+            <a href="#"><i class="far fa-circle"></i>
+              <span class="menu-spacing">
+                &nbsp;&nbsp;Data Tables
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div class="sidebar-header d-header">
+    <h4 class="sidebar-title">Nebula AI</h4>
+  </div>
+
+  <ul class="sidebar-nav">
+    <li style="margin-top:10px;">
+      <a href="#dasboardSubmenu" data-toggle="collapse" class="dropdown-toggle">
+        <i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;Dashboard
+      </a>
+      
+      <ul class="collapse sidebar-nav submenu" id="dasboardSubmenu">
+        <li>
+          <a ><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Option 1</a>
+        </li>
+        <li>
+          <a><i class="fas fa-chart-bar"></i>&nbsp;&nbsp;Option 2</a>
+        </li>
+      </ul>
+    </li>
+    <span style="height: 10px; color: #222d32;"> llll</span>
+    <li>
+      <a href="#tableSubmenu" data-toggle="collapse" class="dropdown-toggle">
+        <i class="fas fa-table"></i>&nbsp;&nbsp;Table
+      </a>
+      <ul class="collapse sidebar-nav submenu" id="tableSubmenu">
+        <li>
+          <a href="#"><i class="far fa-circle"></i>&nbsp;&nbsp;Simple Tables</a>
+        </li>
+        <li>
+          <a href="#"><i class="far fa-circle"></i>&nbsp;&nbsp;Data Tables</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</ng-template>

@@ -1,0 +1,8 @@
+.table td, .table th {
+    padding: 0.6rem;
+    vertical-align: baseline;
+}
+.progress{
+    border-radius: 10px;
+    background-color: #dde1e9;
+}

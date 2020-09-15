@@ -1,0 +1,73 @@
+.spec-list-item{
+    color: #b6bac2;
+}
+
+.spec-list-bullet{
+    list-style: square inside none;
+    color: #51B575;
+    max-width: 5px;
+}
+
+.bullet{
+    color: #51B575;
+    font-size: 6px;
+    vertical-align: middle;
+    padding-right: 3px;
+}
+
+
+
+.progress{
+    border-radius: 10px;
+    background-color: #dadee6;
+}
+
+@media (min-width: 760px){
+    .table-spacing{
+        padding:20px 0 0 40px;
+    }
+
+    .progressBar{
+        width:700px;
+        vertical-align: inherit;
+    }
+
+    .bullet{
+        color: #51B575;
+        font-size: 6px;
+        vertical-align: middle;
+        padding-right: 3px;
+    }
+}
+
+@media (max-width: 759px){ 
+    .progressBar-m{
+        width:100px;
+        vertical-align: inherit;
+    }
+
+    .m-view{
+        font-size: 13px;
+    }
+
+    .m-bullet{
+        color: #51B575;
+        font-size: 5px;
+        vertical-align: middle;
+        padding-right: 3px;
+    }
+
+    .m-spec-list{
+        width: 65px !important;
+    }
+}
+
+tr th{
+    padding:6px;
+    width:86px;
+    font-weight: 400;
+}
+
+tr td{
+    padding:6px;
+}

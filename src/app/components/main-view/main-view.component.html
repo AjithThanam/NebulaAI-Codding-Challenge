@@ -1,0 +1,72 @@
+<div>
+  <div class="row" id="header">
+    <div class="col">
+      <h3>Simple Tables</h3>
+    </div>
+    <div class="m-page-navigation">
+      <p class="m-margin">
+        <i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;Home > Tables > Simple
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <hr class="tableTop">
+      <h5>Striped Full Width Table</h5>
+      <app-striped-table></app-striped-table>
+      <hr class="tableBottom">
+    </div>
+
+    <div class="col">
+      <hr class="tableTop">
+      <div class="row">
+        <div class="col">
+          <h5>Simple Full Width Table</h5>
+        </div>
+        <div>
+          <div class="btn-group" style="margin-top: -5px;">
+            <button type="button" (click)="pageNavigation(-1)" class="btn btn-outline-secondary btn-sm navButton">≪</button>
+            <button type="button" (click)="pageNavigation(1)" class="btn btn-outline-secondary btn-sm navButton">1</button>
+            <button type="button" (click)="pageNavigation(2)" class="btn btn-outline-secondary btn-sm navButton">2</button>
+            <button type="button" (click)="pageNavigation(3)" class="btn btn-outline-secondary btn-sm navButton">3</button>
+            <button type="button" (click)="pageNavigation(4)" class="btn btn-outline-secondary btn-sm navButton">≫</button>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="currentPageNum != 2; then thenBlock else elseBlock"></div>
+      
+      <ng-template #thenBlock>
+        <app-striped-table></app-striped-table>
+      </ng-template>
+
+      <ng-template #elseBlock>
+        <app-simple-table></app-simple-table>
+      </ng-template>
+    
+      <hr class="tableBottom">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <hr class="tableTop">
+      <div class="row">
+        <div class=col>
+          <h5>Responsive Hover Table</h5>
+        </div>
+        <div>
+          <a href="#" style="color: black;">
+            <i class="fas fa-sync-alt" style="font-size: 25px; padding-right: 20px;"></i>
+          </a>
+          <i class="fas fa-expand-alt" style="font-size: 25px; padding-right: 20px;"></i>
+        </div>
+      </div>
+
+      <app-hover-table></app-hover-table>
+
+      <hr class="tableBottom">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+.submenu{
+    background: #2C3B41
+}
+.sidebar-title{
+    color: aliceblue;
+    text-align: center;
+    margin: 0px;
+    padding:16.5px 0px;
+}
+
+.sidebar-header{
+    background-color:#337ca7;
+}
+/* Sidebar styling - the entire ul list */
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.sidebar-nav li a:hover {
+    background: #1e282c;
+}
+
+.closed-siderbar{
+    padding: 0;
+    list-style: none;
+    display: block;
+    font-size: 15px;
+    padding-left: 17px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.dropdown-toggle {
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-spacing{
+    margin-left: 10px;
+}
+
+.closed-siderbar li{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.sidebar-title-swap{
+    display: none;
+}
+
+#submenu-spacing{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#submenu-spacing2{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#tableSubmenu{
+    margin-left: -39px;
+    padding-left: 40px;
+}
+
+@media(max-width:761px){
+    .d-header{
+        display: none;
+    }
+}

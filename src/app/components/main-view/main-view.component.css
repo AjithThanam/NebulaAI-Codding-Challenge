@@ -1,0 +1,37 @@
+#header{
+    color: #4E6D8B;
+    background-color: #ECF0F5;
+}
+
+.tableTop{
+    border: 2px solid  #D2D6DE;
+    border-radius: 10px;
+}
+
+.tableBottom{
+    border: 1px solid  #D2D6DE;
+    border-radius: 10px;
+}
+
+.navButton{
+    padding:0px 7px;
+    border: 1px solid #BEBEBE;
+
+}
+
+@media(max-width:470px){
+    .m-page-navigation{
+        width:353px;
+        padding-left: 15px;
+        padding-top: 5px;
+        margin-bottom: 0;
+        margin-left:15px;
+        background-color: #D2D6DE;
+    }
+
+    .m-margin{
+        margin-bottom: 0.5rem;
+    }
+}
+
+

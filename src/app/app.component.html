@@ -1,0 +1,28 @@
+<div id="wrapper">
+  <div class="page-header m-header">
+    <h4 class="header-title">Nebula AI</h4>
+  </div>
+
+  <div *ngIf="isMobileDevice == false; then thenBlock else elseBlock"></div>
+
+  <ng-template #thenBlock>
+    <div id="sidebar-wrapper">
+      <app-sidebar></app-sidebar>
+    </div>
+    <app-navbar></app-navbar>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <app-navbar></app-navbar>
+    <div id="sidebar-wrapper">
+      <app-sidebar></app-sidebar>
+    </div>
+  </ng-template>
+  
+  <!-- Page content -->
+  <div id="page-content-wrapper" class="page-wrapper">
+    <div class="container-fluid">
+      <app-main-view></app-main-view>
+    </div>
+  </div>
+</div>
